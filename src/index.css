@@ -1,13 +1,112 @@
-body {
+/* ===============================
+          Variables
+================================== */
+:root {
+  --clr-primary: #645cff;
+  --clr-primary-light: #a29dff;
+  --clr-grey-1: #102a42;
+  --clr-grey-10: #f1f5f8;
+
+  --clr-white: #fff;
+  --spacing: 0.25rem;
+  --fixed-width: 50rem;
+}
+
+/* ===============================
+          Global Styles
+================================== */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h3 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  h3 {
+    font-size: 2rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h3 {
+    line-height: 1;
+  }
+}
+
+/* ======= Navbar Styles ======= */
+nav {
+  background: var(--clr-primary);
+  padding: 1.25rem 2rem;
+}
+
+.nav-center {
+  max-width: var(--fixed-width);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h3 {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  color: var(--clr-white);
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+}
+
+nav svg {
+  width: 40px;
+  color: var(--clr-white);
+}
+
+.amount-container {
+  position: absolute;
+  top: -0.6rem;
+  right: -0.6rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--clr-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.total-amount {
+  color: var(--clr-white);
+  margin-bottom: 0;
+  font-size: 1.25rem;
 }

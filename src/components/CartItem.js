@@ -11,10 +11,13 @@ const CartItem = ({ id, title, price, img, amount }) => {
         <button className="remove-btn">remove</button>
       </div>
       <div className="btn-container">
+        {/* increase amount */}
         <button className="amount-btn">
           <ChevronUp />
         </button>
+        {/* amount */}
         <p className="amount">{amount}</p>
+        {/* decrease amount */}
         <button className="amount-btn">
           <ChevronDown />
         </button>
